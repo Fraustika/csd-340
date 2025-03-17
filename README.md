@@ -2,6 +2,6 @@
 
 ## Contributors
 <ul>
-    <li>Darren Darren Osier</li>
+    <li>Darren Osier</li>
     <li>Deana Akimov</li>
 </ul>
