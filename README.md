@@ -11,7 +11,7 @@
 <h2>Contributors</h2>
 <ul>
     <li>Instructor: [Darren Osier]</li>
-    <li>Your Name: [Deana Akimov]</li>
+    <li>[Deana Akimov]</li>
 </ul>
 
 </body>
