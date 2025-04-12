@@ -10,8 +10,8 @@
 
 <h2>Contributors</h2>
 <ul>
-    <li>Instructor: [Darren Osier]</li>
-    <li>[Deana Akimov]</li>
+    <li>Darren Osier</li>
+    <li>Deana Akimov</li>
 </ul>
 
 </body>
