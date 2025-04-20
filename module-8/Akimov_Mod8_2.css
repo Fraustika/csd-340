@@ -1,0 +1,115 @@
+body {
+    font-family: 'Times New Roman', sans-serif; /* Use the same font throughout the page */
+}
+
+
+header {
+    background-color: #005A9C; /* Select an appropriate background color */
+    color: white; /* Set the text color to white */
+    padding: 20px; /* Give the element a padding of 20px */
+    text-align: center; /* Center the text */
+    border-bottom: 15px solid #D6A800; /* Set the bottom border to a solid 15px with the specified color */
+
+}
+
+h1 {
+    font-weight: 400; /* Set the weight to 400 */
+}
+
+navbar {
+    overflow: hidden; /* Set the overflow to hidden */
+    background-color: #333; /* Select an appropriate background color */
+    border-bottom: 15px solid #D6A800; /* Set the bottom border to a solid 15px with the specified color */
+}
+
+navbar a {
+    float: left; /* Float the text to the left */
+    display: block; /* Set the display to block */
+    color: white; /* Set the color to white, or another appropriate color */
+    text-align: center; /* Center the text */
+    padding: 14px 16px; /* Give it a padding of “14px 16px” */
+    text-decoration: none; /* Remove the underline */
+}
+
+navbar a:hover {
+    background-color: #D6A800; /* Select an appropriate background color */
+    color: #333; /* Set color to an appropriate color */
+}
+
+.container {
+    margin-top: 2%; /* Set the top margin to 2% */
+    margin-left: 5%; /* Set the left margin to 5% */
+    margin-right: 5%; /* Set the right margin to 5% */
+    padding: 10px; /* Give the container a padding of 10px */
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Set the box shadow */
+    transition: 0.3s; /* Set the transition to 0.3s */
+    width: 50%; /* Set the width to 50% */
+}
+
+.card-title {
+    text-align: center; /* Center the text */
+    font-size: 2em; /* Set the font-size to 2em */
+    color: #005A9C; /* Select an appropriate color */
+    font-weight: 400; /* Set the weight to 400 */
+}
+
+.card-content {
+    padding: 2px 16px; /* Set the padding to “2px 16px” */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Set the box shadow on hover */
+}
+
+footer {
+    background-color: #005A9C; /* Set the background color to the same color as your header */
+    position: absolute; /* Set the position to absolute */
+    bottom: 0; /* Set the bottom to 0 */
+    width: 100%; /* Give it a width of 100% */
+}
+
+footer p {
+    color: white; /* Set the color to white, or another appropriate color */
+    font-weight: 400; /* Set the weight to 400 */
+    float: right; /* Float the text to the right */
+    padding-right: 10px; /* Give it a right padding of 10px */
+    font-style: italic; /* Set the font-style to italic */
+}
+
+footer a {
+    text-decoration: none; /* Remove the underline */
+    color: white; /* Set the color to white, or another appropriate color */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline the text on hover */
+}
+footer {
+    position: fixed; /* Set the position to fixed */
+    left: 0; /* Set the left to 0 */
+}
+table {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left; /* Aligns text to the left */
+}
+
+th, td {
+    padding-top: 12px;
+    padding-bottom: 12px; /* Adds padding to table header and data cells */
+}
+td {
+    border: 1px solid #ddd; /* Sets the border to 1px solid with color #ddd */
+    padding: 8px; /* Sets the padding to 8px */
+}
+.container {
+    margin: 2% 5% 100px 5%; /* Sets the margin: top, right & left, bottom */
+}
+
+th {
+  background-color: #005A9C;
+  color: white;
+}
