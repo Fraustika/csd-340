@@ -1,0 +1,26 @@
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates three equal columns */
+    margin-top: 10%; /* Adds a margin-top of 10% */
+}
+
+/* Centering the h1 text */
+h1 {
+    text-align: center;
+}
+
+/* Centering the h3 text for each image gallery item */
+#image-gallery h3 {
+    text-align: center;
+}
+
+/* Centering the figure tag */
+#image-gallery figure {
+    text-align: center;
+}
+
+/* Styling for figcaption */
+#image-gallery figcaption {
+    font-style: italic; /* Italic font style */
+    font-size: 0.75em; /* Font size of .75em */
+}

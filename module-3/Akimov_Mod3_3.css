@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center; /* Center the h1 title */
+}
+
+#container {
+    margin: 20px;
+}
+
+div {
+    width: 45%; /* Set the width of the side-by-side divs */
+}
+
+#last-div {
+    width: 100%; /* Set the width of the last div */
+    margin-top: 60%; /* Set margin-top for the last div */
+    float: right; /* Float the last div to the right */
+    margin-bottom: 20px; /* Margin bottom for the last div */
+}
+
+h3 {
+    font-weight: 500; /* Set weight of h3 tags */
+}
+
+ol {
+    font-weight: 300; /* Set weight of ordered list */
+    border: 1px solid red; /* 1px solid red border */
+    border-radius: 15px; /* 15px border-radius */
+    padding: 10px; /* Padding for the ordered list */
+    list-style-position: inside; /* Numbers inside the border */
+}
+
+ul {
+    font-weight: 300; /* Set weight of unordered list */
+    border: 1px dashed red; /* 1px dashed red border */
+    border-radius: 15px; /* 15px border-radius */
+    padding: 10px; /* Padding for the unordered list */
+    list-style-type: upper-roman; /* Change bullet points to upper-roman */
+    list-style-position: inside; /* Positioning of bullet points inside the border */
+}
+
+a {
+    text-decoration: none; /* Remove underline by default */
+}
+
+a:hover {
+    text-decoration: underline; /* Show underline on hover for links */
+}

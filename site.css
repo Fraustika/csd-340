@@ -1,0 +1,31 @@
+/* Google Font Kit */
+@import url('https://fonts.googleapis.com/css2?family=YourFontChoice&display=swap');
+
+#container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/* Styling for headings */
+h1, h2, h3, h4 {
+    background-color: #3457D5; /* Background color */
+    color: white; /* Font color that contrasts well */
+    border: 1px solid #002244; /* border color */
+    padding: 10px;
+    font-family: 'Gidole', sans-serif; /* Google Font */
+}
+
+/* Anchor tag styles */
+a {
+    color: #D6A800; /* Blend this color with your color scheme */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FFC107; /* Choose a hover color that blends with your scheme */
+}
+
+a:visited {
+    color: #FF9800; /* Choose a visited color that blends with your scheme */
+}

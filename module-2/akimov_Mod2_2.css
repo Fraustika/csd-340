@@ -1,0 +1,60 @@
+html, body {
+    font-size: 16px; /* Set the font size for HTML and body */
+}
+
+p {
+    font-weight: 400; /* Set paragraph text weight */
+    line-height: 1.4em; /* Set line height for paragraphs */
+}
+
+h1 {
+    font-weight: 700; /* Set h1 weight */
+    text-transform: uppercase; /* Make h1 text uppercase */
+    text-align: center; /* Center the h1 text */
+}
+
+h2 {
+    font-weight: 500; /* Set h2 weight */
+    text-align: left; /* Align h2 text to the left */
+    padding-top: 15px; /* Add top padding to h2 */
+}
+
+address {
+    text-align: center; /* Center the text in address */
+    font-weight: bold; /* Make the website URL bold */
+    font-size: 1.25em; /* Set font size for the website URL */
+    color: #4F3674; /* Set font color for the website URL */
+    text-decoration: none; /* Remove underline from the website URL */
+}
+
+street {
+
+text-align: center; /* Center the text in address */
+font-size: 1.25em; /* Set font size for the website URL */
+
+
+}
+
+a {
+    font-weight: bold; /* Make the website URL bold */
+    font-size: 1.25em; /* Set font size for the website URL */
+    color: #4F3674; /* Set font color for the website URL */
+    text-decoration: none; /* Remove underline from the website URL */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline the text on hover */
+    background-color: #D6A800; /* Change background color on hover */
+}
+
+a:visited {
+    color: #8B008B; /* Example styling for visited links */
+}
+
+.sentence {
+    font-style: italic; /* Apply italic style to the sentence class */
+}
+
+.intro {
+    text-indent: 2em; /* Indent the first paragraph */
+}

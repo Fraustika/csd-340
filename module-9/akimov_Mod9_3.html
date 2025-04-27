@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+<!--
+      Deana Akimov
+      Assignment 9.3
+-->
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="akimov_Mod9_3.css">
+    <script>
+        var firstVariableValue = "Earth";
+        var secondVariableValue = "imagination";
+        var thirdVariableValue = "spotting";
+        var fourthVariableValue = "embracing";
+
+        function replaceText(spanId, value) {
+            document.getElementById(spanId).innerText = value;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Assignment 9.3: JavaScript - Part 1</h1>
+
+    <p><Bee Movie Script</p>
+    <p>Opening Scene: The hive's leader, a bee named Adam, explains to Barry that all bees have a lifelong job assigned to them, and they never get a day off. Barry expresses his confusion and discontent with the idea of a predetermined life, even if the bees are the most perfectly functioning society on <span id="Earth">______</span> in the history of bees.</p>
+
+    <p>As Barry buzzed deeper into the hive, he stumbled upon a sparkling patch of honey. The honey was golden and shimmered under the sunlight. Barry sat by the honey, feeling a sense of peace and happiness. It was a place where worries vanished and <span id="imagination">______</span> soared. The adventure began as Barry dipped his antennae in the sweet nectar.</p>
+
+    <p>Suddenly, a gentle breeze whispered through the flowers, carrying with it the sound of laughter. Barry looked around, <span id="spotting">______</span> a group of friendly bees gathered nearby. They invited Barry to join their games, creating a bond that felt timeless. In that moment, Barry realized that true happiness comes from <span id="embracing">______</span> the adventures life offers. The struggle for freedom was forgotten as joy filled the hive.</p>
+
+    <button onclick="replaceText('Earth', firstVariableValue)">Earth</button>
+    <button onclick="replaceText('imagination', secondVariableValue)">Imagination</button>
+    <button onclick="replaceText('spotting', thirdVariableValue)">Spotting</button>
+    <button onclick="replaceText('embracing', fourthVariableValue)">Embracing</button>
+</body>
+</html>
