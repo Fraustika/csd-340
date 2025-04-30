@@ -65,53 +65,56 @@
         <div id="entryList"></div>
     </div>
 
-    <script>
-        let items = []; // Initialize the array
+ <script>
+    let items = []; // Initialize the array
 
-        // Function to add an entry
-        document.getElementById('addButton').addEventListener('click', function() {
-            const entryInput = document.getElementById('entryInput');
-            const newEntry = entryInput.value.trim();
-            if (newEntry) {
-                items.push(newEntry); // Add new entry to the array
-                entryInput.value = ''; // Clear the input field
-                console.log("Entry added:", newEntry);
-            } else {
-                console.log("Please enter a valid entry.");
-            }
-        });
-
-        // Function to delete the last entry
-        function deleteLastEntry() {
-            if (items.length > 0) {
-                const deletedEntry = items.pop(); // Remove the last element
-                console.log("Last entry deleted:", deletedEntry);
-            } else {
-                console.log("No entries to delete.");
-            }
+    // Function to add an entry
+    function addItem() {
+        const inputBox = document.getElementById("entryInput");
+        const item = inputBox.value.trim();
+        if (item) {
+            items.push(item); // Add new entry to the array
+            alert("Added: " + item);
+            inputBox.value = ""; // Clear the input box
+            console.log("Entry added:", item);
+        } else {
+            console.log("Please enter a valid entry.");
         }
+    }
 
-        // Function to display the entries
-        function displayEntries() {
-            const entryList = document.getElementById('entryList');
-            entryList.innerHTML = ''; // Clear the current list
-            if (items.length === 0) {
-                entryList.innerHTML = "No entries to display.";
-                return;
-            }
-            
-            items.forEach((item, index) => {
-                entryList.innerHTML += `<div>${index + 1}. ${item}</div>`; // Display with 1-based index
-            });
+    document.getElementById('addButton').addEventListener('click', addItem);
+
+    // Function to delete the last entry
+    function deleteLastEntry() {
+        if (items.length > 0) {
+            const deletedEntry = items.pop(); // Remove the last element
+            console.log("Last entry deleted:", deletedEntry);
+        } else {
+            console.log("No entries to delete.");
         }
+    }
 
-        // Event listeners for the buttons
-        document.getElementById('deleteButton').addEventListener('click', function() {
-            deleteLastEntry();
-            displayEntries(); // Update the display after deletion
+    // Function to display the entries
+    function displayEntries() {
+        const entryList = document.getElementById('entryList');
+        entryList.innerHTML = ''; // Clear the current list
+        if (items.length === 0) {
+            entryList.innerHTML = "No entries to display.";
+            return;
+        }
+        
+        items.forEach((item, index) => {
+            entryList.innerHTML += `<div>${index + 1}. ${item}</div>`; // Display with 1-based index
         });
+    }
 
-        document.getElementById('displayButton').addEventListener('click', displayEntries);
-    </script>
+    // Event listeners for the buttons
+    document.getElementById('deleteButton').addEventListener('click', function() {
+        deleteLastEntry();
+        displayEntries(); // Update the display after deletion
+    });
+
+    document.getElementById('displayButton').addEventListener('click', displayEntries);
+</script>
 </body>
 </html>
