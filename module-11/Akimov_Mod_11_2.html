@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        #container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 4px;
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        #entryList {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 4px;
+            background-color: #ecf0f1;
+        }
+    </style>
+</head>
+<body>
+<h1>Assignment 11.2: JavaScript - Part 3</h1>
+    <h1>Entry Management</h1>
+    <div id="container">
+        <input type="text" id="entryInput" placeholder="Add an entry...">
+        <button id="addButton">Add Entry</button>
+        <button id="deleteButton">Delete Last Entry</button>
+        <button id="displayButton">Display Entries</button>
+        <div id="entryList"></div>
+    </div>
+
+    <script>
+        let items = []; // Initialize the array
+
+        // Function to add an entry
+        document.getElementById('addButton').addEventListener('click', function() {
+            const entryInput = document.getElementById('entryInput');
+            const newEntry = entryInput.value.trim();
+            if (newEntry) {
+                items.push(newEntry); // Add new entry to the array
+                entryInput.value = ''; // Clear the input field
+                console.log("Entry added:", newEntry);
+            } else {
+                console.log("Please enter a valid entry.");
+            }
+        });
+
+        // Function to delete the last entry
+        function deleteLastEntry() {
+            if (items.length > 0) {
+                const deletedEntry = items.pop(); // Remove the last element
+                console.log("Last entry deleted:", deletedEntry);
+            } else {
+                console.log("No entries to delete.");
+            }
+        }
+
+        // Function to display the entries
+        function displayEntries() {
+            const entryList = document.getElementById('entryList');
+            entryList.innerHTML = ''; // Clear the current list
+            if (items.length === 0) {
+                entryList.innerHTML = "No entries to display.";
+                return;
+            }
+            
+            items.forEach((item, index) => {
+                entryList.innerHTML += `<div>${index + 1}. ${item}</div>`; // Display with 1-based index
+            });
+        }
+
+        // Event listeners for the buttons
+        document.getElementById('deleteButton').addEventListener('click', function() {
+            deleteLastEntry();
+            displayEntries(); // Update the display after deletion
+        });
+
+        document.getElementById('displayButton').addEventListener('click', displayEntries);
+    </script>
+</body>
+</html>
