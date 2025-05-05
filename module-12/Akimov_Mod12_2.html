@@ -1,0 +1,132 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <link rel="stylesheet" href="Akimov_Mod12_2.css"> 
+  <style>
+  #last-div {
+  float: right;
+  margin-top: 20px;
+  }
+  #bookList {
+  list-style-type: none; /* Removes bullet points */
+  padding: 0; /* Removes default padding */
+  }
+  #bookList li {
+  margin: 5px 0; /* Adds a little space between each book */
+  }
+  </style>
+ </head>
+ <body>
+
+  <div id="container">
+  <h1 style="text-align: center;">Assignment 12:2: JavaScript - Part 4</h1>
+  <div style="display: flex; justify-content: space-between;">
+  <div style="width: 45%;">
+  
+<style>
+ .books-container {
+    font-family: Arial, sans-serif;
+    width: 100%; /* Adjust to full width of the parent div */
+    border: 1px solid red; /* Box around the container */
+    border-radius: 15px; /* Match specified border-radius */
+    padding: 10px; /* Match specified padding */
+    margin: 10px 0; /* Adds space around the container */
+  }
+
+  .books-container h3 {
+    font-weight: 500; /* Match specified font-weight */
+    text-align: center;
+  }
+
+  .books-container button {
+    background-color: red; /* Change button color to red */
+    color: #f8fafc;
+    border: none;
+    padding: 10px 15px; /* Add horizontal padding */
+    margin: 5px 0; /* Adds space between buttons */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+  }
+  .books-container button:hover {
+    background-color: #FF999C;
+  }
+</style>
+
+<div class="books-container">
+  <h3>Top 10 Favorite Books</h3>
+  <button id="topToBottom">Top to Bottom</button>
+  <button id="bottomToTop">Bottom to Top</button>
+</div>
+  <ol id="bookList"></ol>
+  
+  </div>
+  <div style="width: 45%;">
+  <ul>
+  <h3>5 Things I’ve Learned Since the Course Started</h3>
+  <li>Learning HTML structure</li>
+  <li>Understanding CSS styling</li>
+  <li>Responsive design principles</li>
+  <li>Using divs effectively</li>
+  <li>Working with external resources</li>
+  </ul>
+  </div>
+  </div>
+  </div>
+ 
+
+  <div id="last-div">
+  <a href="https://fraustika.github.io/csd-340" style="float: right;" />Back to Landing Page</a>
+  </div>
+ 
+
+  <script>
+  const books = [
+  '1. A Court of Thorns and Roses',
+  '2. A Little Life',
+  '3. This Is How You Lose the Time War',
+  '4. Make Way for Ducklings',
+  '5. Killers of the Flower Moon',
+  '6. The Lioness of Boston',
+  '7. Circe',
+  '8. The Mountain in the Sea',
+  '9. The Song of Achilles',
+  '10. A Court of Silver Flames'
+  ];
+ 
+
+  function displayBooks(order) {
+  const bookList = document.getElementById('bookList');
+  bookList.innerHTML = ''; // Clear previous list
+ 
+
+  let sortedBooks = [...books]; // Create a copy to avoid modifying the original array
+ 
+
+  if (order === 'ascending') {
+  // Already in ascending order
+  } else if (order === 'descending') {
+  sortedBooks.reverse();
+  }
+ 
+
+  sortedBooks.forEach(book => {
+  let li = document.createElement('li');
+  li.textContent = book;
+  bookList.appendChild(li);
+  });
+  }
+ 
+
+  document.getElementById('topToBottom').addEventListener('click', function() {
+  displayBooks('ascending');
+  });
+ 
+
+  document.getElementById('bottomToTop').addEventListener('click', function() {
+  displayBooks('descending');
+  });
+  displayBooks('ascending');
+  </script>
+ </body>
